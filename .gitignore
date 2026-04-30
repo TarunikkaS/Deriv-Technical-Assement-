@@ -1,4 +1,5 @@
 .env
+.env_example
 node_modules/
 venv/
 .venv/
@@ -8,6 +9,9 @@ dist/
 build/
 .dist/
 artifacts/raw_pages/
-artifacts/vector_store/cache.json
+artifacts/*.json
+artifacts/*.jsonl
+artifacts/vector_store/
+!artifacts/.gitkeep
 .DS_Store
 *.egg-info/
