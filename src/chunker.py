@@ -106,23 +106,32 @@ def chunk_pages(pages: list[dict[str, Any]]) -> dict[str, Any]:
         sections = split_sections(text) or [(page.get("title", ""), text)]
 
         # Merge tiny consecutive sections together until they reach the min target.
+        # When merging, keep all headings: the joined heading list serves as
+        # section_title and the body inlines '## {heading}' between sections so
+        # retrieval still matches against the inner topic words.
         merged: list[tuple[str, str]] = []
-        buf_heading = ""
+        buf_headings: list[str] = []
         buf_body = ""
         for heading, body in sections:
-            if not body.strip() and not heading:
+            heading_str = heading.strip() if heading else ""
+            if not body.strip() and not heading_str:
                 continue
-            combined = (buf_body + "\n\n" + body).strip() if buf_body else body
-            heading_to_use = buf_heading or heading
+            section_block = body
+            if heading_str:
+                section_block = f"## {heading_str}\n{body}".strip()
+            combined = (buf_body + "\n\n" + section_block).strip() if buf_body else section_block
+            new_heading_list = buf_headings + ([heading_str] if heading_str else [])
             if token_count(combined) < config.CHUNK_TOKEN_MIN:
-                buf_heading = heading_to_use
+                buf_headings = new_heading_list
                 buf_body = combined
                 continue
-            merged.append((heading_to_use, combined))
-            buf_heading = ""
+            joined_heading = " | ".join(h for h in new_heading_list if h) or page.get("title", "")
+            merged.append((joined_heading, combined))
+            buf_headings = []
             buf_body = ""
         if buf_body:
-            merged.append((buf_heading, buf_body))
+            joined_heading = " | ".join(h for h in buf_headings if h) or page.get("title", "")
+            merged.append((joined_heading, buf_body))
 
         # If after merging we still have nothing, skip
         if not merged:
