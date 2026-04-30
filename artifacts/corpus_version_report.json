@@ -1,0 +1,8 @@
+{
+  "chunks_unchanged": 0,
+  "chunks_updated": 0,
+  "chunks_added": 27,
+  "chunks_removed": 0,
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "corpus_version": "2026-04-30T11:56:13.255873+00:00"
+}

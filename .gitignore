@@ -1,0 +1,13 @@
+.env
+node_modules/
+venv/
+.venv/
+__pycache__/
+*.pyc
+dist/
+build/
+.dist/
+artifacts/raw_pages/
+artifacts/vector_store/cache.json
+.DS_Store
+*.egg-info/
