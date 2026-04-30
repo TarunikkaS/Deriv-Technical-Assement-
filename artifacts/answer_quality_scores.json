@@ -1,0 +1,16 @@
+[
+  {
+    "query_id": "Q6",
+    "completeness": 8,
+    "specificity": 9,
+    "tone_appropriateness": 10,
+    "operator_review_required": false
+  },
+  {
+    "query_id": "Q8",
+    "completeness": 10,
+    "specificity": 10,
+    "tone_appropriateness": 10,
+    "operator_review_required": false
+  }
+]

@@ -1,0 +1,326 @@
+{
+  "passed": true,
+  "total": 43,
+  "passed_count": 43,
+  "failed_count": 0,
+  "checks": [
+    {
+      "name": "sources.json exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "sources.json valid JSON",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "sources.json has top-level 'sources' key",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "sources.json 'sources' is non-empty list of strings",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test_queries.json exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test_queries.json valid JSON",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test_queries.json is non-empty list",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "every test query has 'id' and 'query'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "artifact exists: corpus.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "artifact valid JSON: corpus.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "artifact exists: vector_store/metadata.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "artifact valid JSON: vector_store/metadata.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "artifact exists: vector_store/embedding_manifest.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "artifact valid JSON: vector_store/embedding_manifest.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "artifact exists: generated_answers.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "artifact valid JSON: generated_answers.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "artifact exists: grounding_verification.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "artifact valid JSON: grounding_verification.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "artifact exists: answer_audit.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "artifact valid JSON: answer_audit.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "vector_store/embeddings.npy exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "llm_calls.jsonl exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "retrieval_logs.jsonl exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "every source URL has an ingestion record",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "every source has status success|failed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "every chunk has required metadata keys",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "majority of chunk token counts in 200-350",
+      "passed": true,
+      "detail": "16/27 in range"
+    },
+    {
+      "name": "embeddings shape matches metadata length",
+      "passed": true,
+      "detail": "27 vs 27"
+    },
+    {
+      "name": "embeddings is 2D float array",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "embeddings count matches corpus chunks",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "answer_audit covers every test query",
+      "passed": true,
+      "detail": "missing: set()"
+    },
+    {
+      "name": "answer_audit records have full trace shape",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "every audited query is verified-answer or documented fallback",
+      "passed": true,
+      "detail": "8/8 valid"
+    },
+    {
+      "name": "generated answers cite chunk IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "llm_calls.jsonl present and parses",
+      "passed": [
+        {
+          "stage": "answer_generation",
+          "query_id": "Q6",
+          "timestamp": "2026-04-30T11:57:47.537389+00:00",
+          "provider": "ollama",
+          "model": "qwen2.5-coder:7b",
+          "prompt_hash": "4aabb0ac03be61dc38cf922b2f30eb750b5e9f3301424a3a6b4dedf60153ac2f",
+          "input_artifacts": [
+            "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/corpus.json",
+            "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/retrieval_logs.jsonl"
+          ],
+          "output_artifact": "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/generated_answers.json",
+          "latency_ms": 75211,
+          "error": null
+        },
+        {
+          "stage": "grounding_verification",
+          "query_id": "Q6",
+          "timestamp": "2026-04-30T11:58:57.026477+00:00",
+          "provider": "ollama",
+          "model": "qwen2.5-coder:7b",
+          "prompt_hash": "9b66ab59f69209e256e800424ccf1bfdf2be51a5167fc5bc3c6bcdc075c28cb5",
+          "input_artifacts": [
+            "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/corpus.json",
+            "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/generated_answers.json"
+          ],
+          "output_artifact": "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/grounding_verification.json",
+          "latency_ms": 69477,
+          "error": null
+        },
+        {
+          "stage": "quality_scoring",
+          "query_id": "Q6",
+          "timestamp": "2026-04-30T11:59:15.472414+00:00",
+          "provider": "ollama",
+          "model": "qwen2.5-coder:7b",
+          "prompt_hash": "e528cd51c9e268d61204e6aa0cc8ab6926ab3ce4d63bd5e19e5177dca908c306",
+          "input_artifacts": [
+            "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/generated_answers.json"
+          ],
+          "output_artifact": "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/answer_quality_scores.json",
+          "latency_ms": 18434,
+          "error": null
+        },
+        {
+          "stage": "answer_generation",
+          "query_id": "Q8",
+          "timestamp": "2026-04-30T12:01:33.307722+00:00",
+          "provider": "ollama",
+          "model": "qwen2.5-coder:7b",
+          "prompt_hash": "2be90c84c73a0877c1e1b0bcd961915efa4b4b400289eff5edcddfade9c6599f",
+          "input_artifacts": [
+            "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/corpus.json",
+            "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/retrieval_logs.jsonl"
+          ],
+          "output_artifact": "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/generated_answers.json",
+          "latency_ms": 136460,
+          "error": null
+        },
+        {
+          "stage": "grounding_verification",
+          "query_id": "Q8",
+          "timestamp": "2026-04-30T12:03:01.278012+00:00",
+          "provider": "ollama",
+          "model": "qwen2.5-coder:7b",
+          "prompt_hash": "4c3e04843ccc2ab5e166a50583ec7271a62f90325e5f3b295d88d4f7170faa1c",
+          "input_artifacts": [
+            "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/corpus.json",
+            "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/generated_answers.json"
+          ],
+          "output_artifact": "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/grounding_verification.json",
+          "latency_ms": 87957,
+          "error": null
+        },
+        {
+          "stage": "quality_scoring",
+          "query_id": "Q8",
+          "timestamp": "2026-04-30T12:03:33.986975+00:00",
+          "provider": "ollama",
+          "model": "qwen2.5-coder:7b",
+          "prompt_hash": "380e1c37d34d089bade81827396c3cfde4b85c55d4ff227b7824901e90f77d8b",
+          "input_artifacts": [
+            "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/generated_answers.json"
+          ],
+          "output_artifact": "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/answer_quality_scores.json",
+          "latency_ms": 32693,
+          "error": null
+        },
+        {
+          "stage": "gap_detection",
+          "query_id": null,
+          "timestamp": "2026-04-30T12:04:23.703745+00:00",
+          "provider": "ollama",
+          "model": "qwen2.5-coder:7b",
+          "prompt_hash": "90c88636fd9fa338f173b2a3bb879cedce0b8882c9307817c854adec09d314de",
+          "input_artifacts": [
+            "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/answer_audit.json"
+          ],
+          "output_artifact": "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/knowledge_gap_report.json",
+          "latency_ms": 49700,
+          "error": null
+        }
+      ],
+      "detail": ""
+    },
+    {
+      "name": "llm_calls includes 'answer_generation'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "llm_calls includes 'grounding_verification'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "llm_calls records contain stage/timestamp/provider/model/prompt_hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "every fallback was triggered by score below threshold",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no answer_generation call for fallback queries",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI module exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI preserves conversation history",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "corpus_version_report has add/update/unchanged/remove counts",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

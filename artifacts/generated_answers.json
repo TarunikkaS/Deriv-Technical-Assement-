@@ -1,0 +1,12 @@
+[
+  {
+    "query_id": "Q6",
+    "query": "Is there a fee for depositing via cryptocurrency?",
+    "answer": "[chunk_id: cryptocurrency_deposits_supported_cryptocurrencies_are_there_fees_for_cr_0000] Deriv does not charge a deposit fee for cryptocurrency deposits. However, you will pay the standard blockchain network fee (the \"gas\" fee or miner fee) to the network when you broadcast the transaction from your wallet. This network fee is paid to the blockchain, not to Deriv, and varies with network congestion."
+  },
+  {
+    "query_id": "Q8",
+    "query": "What documents are required for account verification in Malaysia?",
+    "answer": "To verify an account in Malaysia, clients must submit:\n\n1. Proof of identity — a clear scan or photo of one of:\n   - Malaysian national identity card (MyKad), front and back [chunk_id: account_verification_for_clients_in_malaysia_why_verification_is_required_documents_required__0000]\n   - Valid Malaysian passport (photo page)\n   - Malaysian driving licence\n\n2. Proof of address — a document, less than 3 months old, showing your full name and current Malaysian residential address. Acceptable documents include:\n   - Utility bill (electricity, water, gas, telephone, or internet)\n   - Bank statement\n   - Tax assessment notice from LHDN\n   - Government correspondence [chunk_id: account_verification_for_clients_in_malaysia_why_verification_is_required_documents_required__0000]\n\n3. Selfie verification — a clear photo of you holding your identity document, used to confirm that the document belongs to you [chunk_id: account_verification_for_clients_in_malaysia_why_verification_is_required_documents_required__0000]."
+  }
+]
