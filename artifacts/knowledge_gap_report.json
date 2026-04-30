@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "topic": "Account Management and Security",
+    "query_ids": [
+      "Q1"
+    ],
+    "evidence": "Q1 is about resetting two-factor authentication, which falls under account management and security.",
+    "recommended_content_improvement": "Add a section on how to reset two-factor authentication if you've lost access to your authenticator app."
+  }
+]

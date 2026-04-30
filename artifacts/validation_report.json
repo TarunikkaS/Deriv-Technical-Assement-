@@ -137,7 +137,7 @@
     {
       "name": "majority of chunk token counts in 200-350",
       "passed": true,
-      "detail": "16/27 in range"
+      "detail": "17/27 in range"
     },
     {
       "name": "embeddings shape matches metadata length",
@@ -180,103 +180,103 @@
         {
           "stage": "answer_generation",
           "query_id": "Q6",
-          "timestamp": "2026-04-30T11:57:47.537389+00:00",
+          "timestamp": "2026-04-30T12:41:52.924803+00:00",
           "provider": "ollama",
           "model": "qwen2.5-coder:7b",
-          "prompt_hash": "4aabb0ac03be61dc38cf922b2f30eb750b5e9f3301424a3a6b4dedf60153ac2f",
+          "prompt_hash": "4f7a498031e7da579e6dd5d56162f0f140a91fca78040f885c3a5061302dfe14",
           "input_artifacts": [
             "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/corpus.json",
             "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/retrieval_logs.jsonl"
           ],
           "output_artifact": "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/generated_answers.json",
-          "latency_ms": 75211,
+          "latency_ms": 64242,
           "error": null
         },
         {
           "stage": "grounding_verification",
           "query_id": "Q6",
-          "timestamp": "2026-04-30T11:58:57.026477+00:00",
+          "timestamp": "2026-04-30T12:42:57.763988+00:00",
           "provider": "ollama",
           "model": "qwen2.5-coder:7b",
-          "prompt_hash": "9b66ab59f69209e256e800424ccf1bfdf2be51a5167fc5bc3c6bcdc075c28cb5",
+          "prompt_hash": "55fad113641fd8759b20e27fefc1cedbdac86236636d42f9c6d975af98386930",
           "input_artifacts": [
             "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/corpus.json",
             "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/generated_answers.json"
           ],
           "output_artifact": "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/grounding_verification.json",
-          "latency_ms": 69477,
+          "latency_ms": 64834,
           "error": null
         },
         {
           "stage": "quality_scoring",
           "query_id": "Q6",
-          "timestamp": "2026-04-30T11:59:15.472414+00:00",
+          "timestamp": "2026-04-30T12:43:12.390200+00:00",
           "provider": "ollama",
           "model": "qwen2.5-coder:7b",
-          "prompt_hash": "e528cd51c9e268d61204e6aa0cc8ab6926ab3ce4d63bd5e19e5177dca908c306",
+          "prompt_hash": "42550efc5d8038b9f58e5c0dc9fbc07aebf8da85cb8550a8c1d87dfe01c32566",
           "input_artifacts": [
             "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/generated_answers.json"
           ],
           "output_artifact": "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/answer_quality_scores.json",
-          "latency_ms": 18434,
+          "latency_ms": 14599,
           "error": null
         },
         {
           "stage": "answer_generation",
           "query_id": "Q8",
-          "timestamp": "2026-04-30T12:01:33.307722+00:00",
+          "timestamp": "2026-04-30T12:44:45.287893+00:00",
           "provider": "ollama",
           "model": "qwen2.5-coder:7b",
-          "prompt_hash": "2be90c84c73a0877c1e1b0bcd961915efa4b4b400289eff5edcddfade9c6599f",
+          "prompt_hash": "0fee4430581cb4e4f1bbf5e9a5b2832481f694b5606b614c5dfb4c7f06257cdf",
           "input_artifacts": [
             "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/corpus.json",
             "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/retrieval_logs.jsonl"
           ],
           "output_artifact": "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/generated_answers.json",
-          "latency_ms": 136460,
+          "latency_ms": 91865,
           "error": null
         },
         {
           "stage": "grounding_verification",
           "query_id": "Q8",
-          "timestamp": "2026-04-30T12:03:01.278012+00:00",
+          "timestamp": "2026-04-30T12:45:32.548799+00:00",
           "provider": "ollama",
           "model": "qwen2.5-coder:7b",
-          "prompt_hash": "4c3e04843ccc2ab5e166a50583ec7271a62f90325e5f3b295d88d4f7170faa1c",
+          "prompt_hash": "3b1dfb16ba79ec52a2b39886f2a0e478ba17d3590a998395f7ea349a023e9a37",
           "input_artifacts": [
             "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/corpus.json",
             "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/generated_answers.json"
           ],
           "output_artifact": "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/grounding_verification.json",
-          "latency_ms": 87957,
+          "latency_ms": 47254,
           "error": null
         },
         {
           "stage": "quality_scoring",
           "query_id": "Q8",
-          "timestamp": "2026-04-30T12:03:33.986975+00:00",
+          "timestamp": "2026-04-30T12:45:51.455350+00:00",
           "provider": "ollama",
           "model": "qwen2.5-coder:7b",
-          "prompt_hash": "380e1c37d34d089bade81827396c3cfde4b85c55d4ff227b7824901e90f77d8b",
+          "prompt_hash": "0c225bc0b18f527b8f74529836a5c848e43a65a2d0b9a14259c4308ec4c0e9a8",
           "input_artifacts": [
             "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/generated_answers.json"
           ],
           "output_artifact": "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/answer_quality_scores.json",
-          "latency_ms": 32693,
+          "latency_ms": 18903,
           "error": null
         },
         {
           "stage": "gap_detection",
           "query_id": null,
-          "timestamp": "2026-04-30T12:04:23.703745+00:00",
+          "timestamp": "2026-04-30T12:46:21.661995+00:00",
           "provider": "ollama",
           "model": "qwen2.5-coder:7b",
-          "prompt_hash": "90c88636fd9fa338f173b2a3bb879cedce0b8882c9307817c854adec09d314de",
+          "prompt_hash": "d29c8da475f043985fa0cc54f6d080abad48f8c92dbc227773664f743cbef3a7",
           "input_artifacts": [
             "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/answer_audit.json"
           ],
           "output_artifact": "/Users/tarunikkasuresh/Desktop/deriv tech assesment/artifacts/knowledge_gap_report.json",
-          "latency_ms": 49700,
+          "latency_ms": 30201,
           "error": null
         }
       ],

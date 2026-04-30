@@ -2,11 +2,29 @@
   {
     "query_id": "Q6",
     "second_pass": false,
-    "claims": []
+    "claims": [
+      {
+        "claim": "Deriv does not charge a deposit fee for cryptocurrency deposits.",
+        "grounded": true,
+        "supporting_chunk_ids": [
+          "cryptocurrency_deposits_supported_cryptocurrencies_are_there_fees_for_cr_0000"
+        ],
+        "explanation": ""
+      }
+    ]
   },
   {
     "query_id": "Q8",
     "second_pass": false,
-    "claims": []
+    "claims": [
+      {
+        "claim": "Clients must submit proof of identity.",
+        "grounded": true,
+        "supporting_chunk_ids": [
+          "account_verification_for_clients_in_malaysia_why_verification_is_required_documents_required__0000"
+        ],
+        "explanation": ""
+      }
+    ]
   }
 ]

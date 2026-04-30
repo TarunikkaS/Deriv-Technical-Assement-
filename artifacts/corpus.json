@@ -1,5 +1,5 @@
 {
-  "corpus_version": "2026-04-30T12:08:26.201123+00:00",
+  "corpus_version": "2026-04-30T12:40:33.493030+00:00",
   "chunks": [
     {
       "chunk_id": "trading_questions_and_answers_help_centre_deriv_trading_questions_and_answers_help_centre_deriv_0000",
@@ -277,7 +277,7 @@
       "source_url": "https://deriv.com/help-centre/trading/",
       "title": "Trading Questions and Answers | Help Centre | Deriv",
       "status": "success",
-      "scraped_at": "2026-04-30T12:08:20.981756+00:00",
+      "scraped_at": "2026-04-30T12:40:29.039725+00:00",
       "error": null,
       "source_type": "scraped"
     },
@@ -285,7 +285,7 @@
       "source_url": "https://deriv.com/help-centre/deposits-and-withdrawals/",
       "title": "Deposits and Withdrawals | Help Centre | Deriv",
       "status": "success",
-      "scraped_at": "2026-04-30T12:08:22.046631+00:00",
+      "scraped_at": "2026-04-30T12:40:30.110281+00:00",
       "error": null,
       "source_type": "scraped"
     },
@@ -293,7 +293,7 @@
       "source_url": "https://deriv.com/help-centre/accounts/",
       "title": "",
       "status": "failed",
-      "scraped_at": "2026-04-30T12:08:25.151381+00:00",
+      "scraped_at": "2026-04-30T12:40:32.520279+00:00",
       "error": "http_status=404",
       "source_type": "scraped"
     },
@@ -301,7 +301,7 @@
       "source_url": "https://deriv.com/help-centre/security/",
       "title": "Security | Help Centre FAQs | Deriv",
       "status": "success",
-      "scraped_at": "2026-04-30T12:08:25.716396+00:00",
+      "scraped_at": "2026-04-30T12:40:32.997331+00:00",
       "error": null,
       "source_type": "scraped"
     },
@@ -309,7 +309,7 @@
       "source_url": "fixture://accounts_closure.md",
       "title": "Closing your Deriv account",
       "status": "success",
-      "scraped_at": "2026-04-30T12:08:26.181100+00:00",
+      "scraped_at": "2026-04-30T12:40:33.458048+00:00",
       "error": null,
       "source_type": "synthetic"
     },
@@ -317,7 +317,7 @@
       "source_url": "fixture://accounts_multiple.md",
       "title": "Multiple Deriv accounts",
       "status": "success",
-      "scraped_at": "2026-04-30T12:08:26.181517+00:00",
+      "scraped_at": "2026-04-30T12:40:33.460951+00:00",
       "error": null,
       "source_type": "synthetic"
     },
@@ -325,7 +325,7 @@
       "source_url": "fixture://accounts_verification_malaysia.md",
       "title": "Account verification for clients in Malaysia",
       "status": "success",
-      "scraped_at": "2026-04-30T12:08:26.182051+00:00",
+      "scraped_at": "2026-04-30T12:40:33.461461+00:00",
       "error": null,
       "source_type": "synthetic"
     },
@@ -333,7 +333,7 @@
       "source_url": "fixture://deposits_crypto.md",
       "title": "Cryptocurrency deposits",
       "status": "success",
-      "scraped_at": "2026-04-30T12:08:26.182330+00:00",
+      "scraped_at": "2026-04-30T12:40:33.461793+00:00",
       "error": null,
       "source_type": "synthetic"
     },
@@ -341,7 +341,7 @@
       "source_url": "fixture://security_2fa.md",
       "title": "Two-Factor Authentication (2FA) on Deriv",
       "status": "success",
-      "scraped_at": "2026-04-30T12:08:26.182629+00:00",
+      "scraped_at": "2026-04-30T12:40:33.462118+00:00",
       "error": null,
       "source_type": "synthetic"
     },
@@ -349,7 +349,7 @@
       "source_url": "fixture://security_responsible_trading.md",
       "title": "Responsible trading and self-imposed limits",
       "status": "success",
-      "scraped_at": "2026-04-30T12:08:26.182898+00:00",
+      "scraped_at": "2026-04-30T12:40:33.462435+00:00",
       "error": null,
       "source_type": "synthetic"
     },
@@ -357,7 +357,7 @@
       "source_url": "fixture://trading_overview.md",
       "title": "Trading on Deriv — overview",
       "status": "success",
-      "scraped_at": "2026-04-30T12:08:26.183215+00:00",
+      "scraped_at": "2026-04-30T12:40:33.462814+00:00",
       "error": null,
       "source_type": "synthetic"
     },
@@ -365,7 +365,7 @@
       "source_url": "fixture://withdrawals_bank_transfer.md",
       "title": "Bank transfer withdrawals",
       "status": "success",
-      "scraped_at": "2026-04-30T12:08:26.183403+00:00",
+      "scraped_at": "2026-04-30T12:40:33.463044+00:00",
       "error": null,
       "source_type": "synthetic"
     },
@@ -373,7 +373,7 @@
       "source_url": "fixture://withdrawals_ewallet.md",
       "title": "E-wallet withdrawals",
       "status": "success",
-      "scraped_at": "2026-04-30T12:08:26.183739+00:00",
+      "scraped_at": "2026-04-30T12:40:33.463353+00:00",
       "error": null,
       "source_type": "synthetic"
     }

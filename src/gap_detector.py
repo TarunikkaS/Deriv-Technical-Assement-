@@ -49,8 +49,14 @@ def detect_gaps(
         output_artifact=str(config.KNOWLEDGE_GAP_REPORT_PATH),
     )
 
-    if isinstance(parsed, dict) and "topics" in parsed and isinstance(parsed["topics"], list):
-        parsed = parsed["topics"]
+    if isinstance(parsed, dict):
+        for key in ("topics", "clusters", "gaps", "results"):
+            if key in parsed and isinstance(parsed[key], list):
+                parsed = parsed[key]
+                break
+        else:
+            if "topic" in parsed:
+                parsed = [parsed]
     if not isinstance(parsed, list):
         parsed = []
 
