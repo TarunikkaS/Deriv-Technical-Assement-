@@ -205,6 +205,15 @@ By default, the pipeline is configured to use **Ollama** for local LLM inference
 ollama pull llama3.1:8b
 ```
 
+If `llama3.1:8b` is not installed on your machine, either pull it with the
+command above or run the pipeline with any local Ollama model you already
+have. For example, this repository was also tested successfully with:
+
+```bash
+OLLAMA_MODEL=qwen2.5-coder:7b python run_pipeline.py
+OLLAMA_MODEL=qwen2.5-coder:7b python validate.py
+```
+
 The first run may also download the embedding model:
 
 ```text
