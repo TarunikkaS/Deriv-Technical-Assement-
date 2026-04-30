@@ -112,6 +112,16 @@ def chunk_pages(pages: list[dict[str, Any]]) -> dict[str, Any]:
         merged: list[tuple[str, str]] = []
         buf_headings: list[str] = []
         buf_body = ""
+
+        def _flush() -> None:
+            nonlocal buf_headings, buf_body
+            if not buf_body:
+                return
+            joined = " | ".join(h for h in buf_headings if h) or page.get("title", "")
+            merged.append((joined, buf_body))
+            buf_headings = []
+            buf_body = ""
+
         for heading, body in sections:
             heading_str = heading.strip() if heading else ""
             if not body.strip() and not heading_str:
@@ -119,19 +129,26 @@ def chunk_pages(pages: list[dict[str, Any]]) -> dict[str, Any]:
             section_block = body
             if heading_str:
                 section_block = f"## {heading_str}\n{body}".strip()
+            section_tokens = token_count(section_block)
+
+            # If this section is already large enough to stand alone, flush
+            # whatever tiny material was buffered first so it doesn't dilute
+            # this section's topic.
+            if section_tokens >= config.CHUNK_TOKEN_MIN:
+                _flush()
+                merged.append((heading_str or page.get("title", ""), section_block))
+                continue
+
             combined = (buf_body + "\n\n" + section_block).strip() if buf_body else section_block
             new_heading_list = buf_headings + ([heading_str] if heading_str else [])
             if token_count(combined) < config.CHUNK_TOKEN_MIN:
                 buf_headings = new_heading_list
                 buf_body = combined
                 continue
-            joined_heading = " | ".join(h for h in new_heading_list if h) or page.get("title", "")
-            merged.append((joined_heading, combined))
-            buf_headings = []
-            buf_body = ""
-        if buf_body:
-            joined_heading = " | ".join(h for h in buf_headings if h) or page.get("title", "")
-            merged.append((joined_heading, buf_body))
+            buf_headings = new_heading_list
+            buf_body = combined
+            _flush()
+        _flush()
 
         # If after merging we still have nothing, skip
         if not merged:

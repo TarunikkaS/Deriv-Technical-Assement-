@@ -1,0 +1,154 @@
+[
+  {
+    "query_id": "CLI_001",
+    "query": "What documents are required for account verification in Malaysia?",
+    "conversation_context_used": "",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "chunk_id": "account_verification_for_clients_in_malaysia_why_verification_is_required_documents_required__0000",
+        "score": 0.8291196227073669,
+        "source_url": "fixture://accounts_verification_malaysia.md",
+        "section_title": "Why verification is required | Documents required for clients in Malaysia",
+        "text": "## Why verification is required\nAccount verification (also called Know-Your-Customer or KYC) is required to comply with anti-money-laundering regulations and to keep your funds safe. Verification must usually be completed before your first withdrawal, though you can deposit and trade smaller amounts before verifying.\n\n## Documents required for clients in Malaysia\nClients with a Malaysian address must submit:\n\n1. Proof of identity — a clear scan or photo of one of:\n - Malaysian national identity card (MyKad), front and back\n - Valid Malaysian passport (photo page)\n - Malaysian driving licence\n\n2. Proof of address — a document, less than 3 months old, showing your full name and current Malaysian residential address. Acceptable documents include:\n - Utility bill (electricity, water, gas, telephone, or internet)\n - Bank statement\n - Tax assessment notice from LHDN\n - Government correspondence\n\n3. Selfie verification — a clear photo of you holding your identity document, used to confirm that the document belongs to you."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "account_verification_for_clients_in_malaysia_what_is_not_accepted_how_to_upload_documents_aft_0001",
+        "score": 0.4376508593559265,
+        "source_url": "fixture://accounts_verification_malaysia.md",
+        "section_title": "What is not accepted | How to upload documents | After verification",
+        "text": "## What is not accepted\nDo not submit screenshots of mobile-banking apps, edited or marked-up scans, expired documents, or documents in someone else's name. Documents must be in colour and the entire page must be visible.\n\n## How to upload documents\nGo to Account settings, choose Verification, and upload each document under the corresponding category. Most submissions are reviewed within 1 to 2 business days. You will receive an email when verification completes or if additional information is needed.\n\n## After verification\nOnce your documents are approved, your account is fully verified. You can then withdraw funds without restrictions and access higher trading limits. You only need to verify once unless your documents expire or your address changes — in which case Deriv may ask for an updated document."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "deposits_and_withdrawals_help_centre_deriv_deposits_and_withdrawals_help_centre_deriv_0000",
+        "score": 0.2934492826461792,
+        "source_url": "https://deriv.com/help-centre/deposits-and-withdrawals/",
+        "section_title": "Deposits and Withdrawals | Help Centre | Deriv",
+        "text": "Thank you! Your submission has been received!\nOops! Something went wrong while submitting the form.\nDeposits and withdrawals\nWhat payment methods can I use for deposits and withdrawals?\nHow long does it take for my deposits and withdrawals to be processed?\nWhat is the minimum deposit or withdrawal amount?\nMy withdrawal verification link has expired. What should I do?\nHow can I remove the withdrawal limit on my account?\nWhy did my credit card deposit get declined?\nCan I withdraw my deposit bonus?\nWhat conversion rates do you use for deposits and withdrawals?\nHow can I cancel my withdrawal?\nCan I deposit with my friend's/family member's debit/credit card or e-wallet?\nWhy can't I see any payment methods on the Withdrawal page?\nCan I use the same address to make a cryptocurrency deposit?\nCan I use my Binance wallet to make the cryptocurrency deposit?\nWhat is the minimum deposit and withdrawal for cryptocurrency?\nCan I transfer the funds in my account to another person's account?\nSorry, we couldn’t find any results with “\nEmpty state\n” in it."
+      },
+      {
+        "rank": 4,
+        "chunk_id": "multiple_deriv_accounts_how_to_open_additional_accounts_limits_managing__0001",
+        "score": 0.2911338210105896,
+        "source_url": "fixture://accounts_multiple.md",
+        "section_title": "How to open additional accounts | Limits | Managing multiple accounts",
+        "text": "## How to open additional accounts\nGo to Account settings, choose Add account, and select the account type and currency you want. Some account types may require additional verification depending on your country of residence and the regulator that oversees that account.\n\n## Limits\nDeriv does not permit duplicate accounts of the same type and currency for a single client. If you try to open a second account of the same type and currency, the request will be declined. If you need to change the currency of an existing account, contact support — currency changes are only allowed before the account has been funded.\n\n## Managing multiple accounts\nYou can switch between accounts using the account selector in the top right of the Deriv interface. Internal transfers between your own accounts are typically instant and have no fee, except for currency conversion which is applied at the prevailing market rate."
+      },
+      {
+        "rank": 5,
+        "chunk_id": "closing_your_deriv_account_reopening_a_closed_account_data_retention_0001",
+        "score": 0.28089943528175354,
+        "source_url": "fixture://accounts_closure.md",
+        "section_title": "Reopening a closed account | Data retention",
+        "text": "## Reopening a closed account\nA closed account can sometimes be reopened by contacting support, provided the closure was not for compliance reasons. If the closure was triggered by a compliance review, the decision is final and a new account cannot be opened.\n\n## Data retention\nEven after closure, Deriv retains your account records for a period required by financial regulations (typically 5 to 7 years depending on jurisdiction). This is for audit and anti-money-laundering compliance, not for marketing."
+      }
+    ],
+    "confidence": {
+      "top_score": 0.8291196227073669,
+      "top_source_url": "fixture://accounts_verification_malaysia.md",
+      "fallback": false,
+      "threshold": 0.72
+    },
+    "fallback_triggered": false,
+    "generated_answer": "To verify an account in Malaysia, clients must submit:\n\n1. Proof of identity — a clear scan or photo of one of:\n   - Malaysian national identity card (MyKad), front and back [chunk_id: account_verification_for_clients_in_malaysia_why_verification_is_required_documents_required__0000]\n   - Valid Malaysian passport (photo page)\n   - Malaysian driving licence\n\n2. Proof of address — a document, less than 3 months old, showing your full name and current Malaysian residential address. Acceptable documents include:\n   - Utility bill (electricity, water, gas, telephone, or internet)\n   - Bank statement\n   - Tax assessment notice from LHDN\n   - Government correspondence [chunk_id: account_verification_for_clients_in_malaysia_why_verification_is_required_documents_required__0000]\n\n3. Selfie verification — a clear photo of you holding your identity document, used to confirm that the document belongs to you [chunk_id: account_verification_for_clients_in_malaysia_why_verification_is_required_documents_required__0000].",
+    "grounding_verification": [
+      {
+        "claim": "Clients must submit proof of identity.",
+        "grounded": true,
+        "supporting_chunk_ids": [
+          "account_verification_for_clients_in_malaysia_why_verification_is_required_documents_required__0000"
+        ],
+        "explanation": ""
+      }
+    ],
+    "regeneration": null,
+    "quality_scores": null,
+    "final_response": "To verify an account in Malaysia, clients must submit:\n\n1. Proof of identity — a clear scan or photo of one of:\n   - Malaysian national identity card (MyKad), front and back [chunk_id: account_verification_for_clients_in_malaysia_why_verification_is_required_documents_required__0000]\n   - Valid Malaysian passport (photo page)\n   - Malaysian driving licence\n\n2. Proof of address — a document, less than 3 months old, showing your full name and current Malaysian residential address. Acceptable documents include:\n   - Utility bill (electricity, water, gas, telephone, or internet)\n   - Bank statement\n   - Tax assessment notice from LHDN\n   - Government correspondence [chunk_id: account_verification_for_clients_in_malaysia_why_verification_is_required_documents_required__0000]\n\n3. Selfie verification — a clear photo of you holding your identity document, used to confirm that the document belongs to you [chunk_id: account_verification_for_clients_in_malaysia_why_verification_is_required_documents_required__0000].",
+    "stages": [
+      "QUERY_RECEIVED",
+      "CHUNKS_RETRIEVED",
+      "CONFIDENCE_CHECKED",
+      "ANSWER_GENERATED",
+      "GROUNDING_VERIFIED",
+      "ANSWER_RETURNED_OR_FALLBACK"
+    ]
+  },
+  {
+    "query_id": "CLI_002",
+    "query": "What if I do not have a passport for the verification mentioned above?",
+    "conversation_context_used": "Previous Q: What documents are required for account verification in Malaysia?\nPrevious A: To verify an account in Malaysia, clients must submit:\n\n1. Proof of identity — a clear scan or photo of one of:\n   - Malaysian national identity card (MyKad), front and back [chunk_id: account_verification_for_clients_in_malaysia_why_verification_is_required_documents_required__0000]\n   - Valid Malaysian passport (photo page)\n   - Malaysian driving licence\n\n2. Proof of address — a document, less than 3 months old, showing your full name and current Malaysian residential address. Acceptable documents include:\n   - Utility bill (electricity, water, gas, telephone, or internet)\n   - Bank statement\n   - Tax assessment notice from LHDN\n   - Government correspondence [chunk_id: account_verification_for_clients_in_malaysia_why_verification_is_required_documents_required__0000]\n\n3. Selfie verification — a clear photo of you holding your identity document, used to confirm that the document belongs to you [chunk_id: account_verification_for_clients_in_malaysia_why_verification_is_required_documents_required__0000].",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "chunk_id": "account_verification_for_clients_in_malaysia_why_verification_is_required_documents_required__0000",
+        "score": 0.8789178133010864,
+        "source_url": "fixture://accounts_verification_malaysia.md",
+        "section_title": "Why verification is required | Documents required for clients in Malaysia",
+        "text": "## Why verification is required\nAccount verification (also called Know-Your-Customer or KYC) is required to comply with anti-money-laundering regulations and to keep your funds safe. Verification must usually be completed before your first withdrawal, though you can deposit and trade smaller amounts before verifying.\n\n## Documents required for clients in Malaysia\nClients with a Malaysian address must submit:\n\n1. Proof of identity — a clear scan or photo of one of:\n - Malaysian national identity card (MyKad), front and back\n - Valid Malaysian passport (photo page)\n - Malaysian driving licence\n\n2. Proof of address — a document, less than 3 months old, showing your full name and current Malaysian residential address. Acceptable documents include:\n - Utility bill (electricity, water, gas, telephone, or internet)\n - Bank statement\n - Tax assessment notice from LHDN\n - Government correspondence\n\n3. Selfie verification — a clear photo of you holding your identity document, used to confirm that the document belongs to you."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "account_verification_for_clients_in_malaysia_what_is_not_accepted_how_to_upload_documents_aft_0001",
+        "score": 0.4334905743598938,
+        "source_url": "fixture://accounts_verification_malaysia.md",
+        "section_title": "What is not accepted | How to upload documents | After verification",
+        "text": "## What is not accepted\nDo not submit screenshots of mobile-banking apps, edited or marked-up scans, expired documents, or documents in someone else's name. Documents must be in colour and the entire page must be visible.\n\n## How to upload documents\nGo to Account settings, choose Verification, and upload each document under the corresponding category. Most submissions are reviewed within 1 to 2 business days. You will receive an email when verification completes or if additional information is needed.\n\n## After verification\nOnce your documents are approved, your account is fully verified. You can then withdraw funds without restrictions and access higher trading limits. You only need to verify once unless your documents expire or your address changes — in which case Deriv may ask for an updated document."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "deposits_and_withdrawals_help_centre_deriv_deposits_and_withdrawals_help_centre_deriv_0000",
+        "score": 0.31743690371513367,
+        "source_url": "https://deriv.com/help-centre/deposits-and-withdrawals/",
+        "section_title": "Deposits and Withdrawals | Help Centre | Deriv",
+        "text": "Thank you! Your submission has been received!\nOops! Something went wrong while submitting the form.\nDeposits and withdrawals\nWhat payment methods can I use for deposits and withdrawals?\nHow long does it take for my deposits and withdrawals to be processed?\nWhat is the minimum deposit or withdrawal amount?\nMy withdrawal verification link has expired. What should I do?\nHow can I remove the withdrawal limit on my account?\nWhy did my credit card deposit get declined?\nCan I withdraw my deposit bonus?\nWhat conversion rates do you use for deposits and withdrawals?\nHow can I cancel my withdrawal?\nCan I deposit with my friend's/family member's debit/credit card or e-wallet?\nWhy can't I see any payment methods on the Withdrawal page?\nCan I use the same address to make a cryptocurrency deposit?\nCan I use my Binance wallet to make the cryptocurrency deposit?\nWhat is the minimum deposit and withdrawal for cryptocurrency?\nCan I transfer the funds in my account to another person's account?\nSorry, we couldn’t find any results with “\nEmpty state\n” in it."
+      },
+      {
+        "rank": 4,
+        "chunk_id": "e_wallet_withdrawals_requirements_troubleshooting_delayed_withdrawals_0001",
+        "score": 0.28457897901535034,
+        "source_url": "fixture://withdrawals_ewallet.md",
+        "section_title": "Requirements | Troubleshooting delayed withdrawals",
+        "text": "## Requirements\nYour e-wallet account must be in your own name. Withdrawals can only be sent to an e-wallet that has previously been used to deposit funds into your Deriv account, or to an e-wallet that you have separately verified with Deriv. This is a regulatory requirement to prevent fraud.\n\n## Troubleshooting delayed withdrawals\nIf your e-wallet withdrawal has not arrived after 24 hours, check your Deriv withdrawal history. If the status is \"Processed\", contact your e-wallet provider with the reference number. If the status is \"In review\", Deriv compliance may need to verify your identity — they will reach you by email within 1 to 2 business days."
+      },
+      {
+        "rank": 5,
+        "chunk_id": "security_help_centre_faqs_deriv_security_help_centre_faqs_deriv_0000",
+        "score": 0.2658783495426178,
+        "source_url": "https://deriv.com/help-centre/security/",
+        "section_title": "Security | Help Centre FAQs | Deriv",
+        "text": "Thank you! Your submission has been received!\nOops! Something went wrong while submitting the form.\nSecurity\nI lost my phone. How can I disable two-factor authentication (2FA)?\nHow can I identify Deriv customer support impersonators on Telegram?\nHow can I stay safe from impersonators on Telegram?\nHow can I identify emails from impersonators of Deriv customer support?\nSorry, we couldn’t find any results with “\nEmpty state\n” in it."
+      }
+    ],
+    "confidence": {
+      "top_score": 0.8789178133010864,
+      "top_source_url": "fixture://accounts_verification_malaysia.md",
+      "fallback": false,
+      "threshold": 0.72
+    },
+    "fallback_triggered": false,
+    "generated_answer": "If you do not have a passport for verification, you can use an alternative form of identification as listed in [chunk_id: account_verification_for_clients_in_malaysia_why_verification_is_required_documents_required__0000]. Specifically, you can provide:\n\n- Malaysian national identity card (MyKad), front and back\n- Valid Malaysian driving licence\n\nThese alternatives should meet the verification requirements for your Deriv account.",
+    "grounding_verification": [
+      {
+        "claim": "If you do not have a passport for verification, you can use an alternative form of identification as listed in [chunk_id: account_verification_for_clients_in_malaysia_why_verification_is_required_documents_required__0000].",
+        "grounded": true,
+        "supporting_chunk_ids": [
+          "account_verification_for_clients_in_malaysia_why_verification_is_required_documents_required__0000"
+        ],
+        "explanation": ""
+      }
+    ],
+    "regeneration": null,
+    "quality_scores": null,
+    "final_response": "If you do not have a passport for verification, you can use an alternative form of identification as listed in [chunk_id: account_verification_for_clients_in_malaysia_why_verification_is_required_documents_required__0000]. Specifically, you can provide:\n\n- Malaysian national identity card (MyKad), front and back\n- Valid Malaysian driving licence\n\nThese alternatives should meet the verification requirements for your Deriv account.",
+    "stages": [
+      "QUERY_RECEIVED",
+      "CHUNKS_RETRIEVED",
+      "CONFIDENCE_CHECKED",
+      "ANSWER_GENERATED",
+      "GROUNDING_VERIFIED",
+      "ANSWER_RETURNED_OR_FALLBACK"
+    ]
+  }
+]

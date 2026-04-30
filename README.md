@@ -34,6 +34,19 @@ python validate.py
 
 The generated artifacts are not meant to be treated as static final answers. They represent the audit trail produced by a run of the pipeline, including scraped content, corpus chunks, cached embeddings, retrieval logs, generated answers, claim-level grounding verification, regeneration details, LLM call logs, and validation output.
 
+## Branches to review
+
+This repository currently has two useful branches:
+
+- `main` contains the complete replayable RAG pipeline plus the generated
+  batch artifacts from the main assessment run.
+- `artifact-updates` contains the latest follow-up updates, including the
+  refreshed artifacts and `artifacts/cli_session_audit.json`.
+
+Please check both branches when reviewing the submission: start with `main`
+for the baseline implementation, then compare `artifact-updates` for the
+newest artifact and prompt/verification updates.
+
 ---
 
 ## What the system does

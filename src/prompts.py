@@ -70,9 +70,13 @@ def verification_user_prompt(answer: str, chunks: list[dict[str, Any]]) -> str:
     return (
         f"Assistant answer to verify:\n{answer}\n\n"
         f"Context chunks (the only evidence allowed):\n{render_chunks_block(chunks)}\n\n"
-        "Extract every factual claim from the answer. For each claim, set grounded=true "
+        "Extract every factual claim from the answer. Decompose multi-sentence "
+        "answers into one claim per fact. For each claim, set grounded=true "
         "ONLY if a chunk directly supports it; otherwise grounded=false with "
-        "supporting_chunk_ids=[] and explanation='ungrounded'. Return a JSON array."
+        "supporting_chunk_ids=[] and explanation='ungrounded'.\n\n"
+        "Return a JSON ARRAY (a list of objects). Even if there is only one "
+        "claim, the response must be a list, e.g. "
+        '[{"claim": "...", "grounded": true, "supporting_chunk_ids": ["..."], "explanation": ""}].'
     )
 
 
@@ -112,6 +116,9 @@ def gap_user_prompt(weak_queries: list[dict[str, Any]]) -> str:
     return (
         "Low-confidence queries:\n"
         f"{rendered}\n\n"
-        "Cluster them into topics. Return JSON list of objects with keys "
-        "topic, query_ids, evidence, recommended_content_improvement."
+        "Cluster them into topics. Return a JSON ARRAY (a list of objects), "
+        "even if there is only one topic. Each object must have keys: "
+        "topic, query_ids (list), evidence, recommended_content_improvement. "
+        'Example: [{"topic": "...", "query_ids": ["Q1","Q2"], "evidence": "...", '
+        '"recommended_content_improvement": "..."}].'
     )

@@ -1,5 +1,5 @@
 {
-  "corpus_version": "2026-04-30T12:08:26.201123+00:00",
+  "corpus_version": "2026-04-30T12:40:33.493030+00:00",
   "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
   "embedding_dim": 384,
   "chunk_id_to_index": {

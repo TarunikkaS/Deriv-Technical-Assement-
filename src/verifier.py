@@ -38,8 +38,16 @@ def verify_answer(
 def _normalize_verification(parsed: Any, chunks: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """Coerce model output to the spec shape."""
     valid_ids = {c["chunk_id"] for c in chunks}
-    if isinstance(parsed, dict) and "claims" in parsed and isinstance(parsed["claims"], list):
-        parsed = parsed["claims"]
+    # Accept several shapes: a list of claims, a wrapper dict {"claims": [...]},
+    # a wrapper dict {"results": [...]}, or a single claim object.
+    if isinstance(parsed, dict):
+        for key in ("claims", "results", "verifications"):
+            if key in parsed and isinstance(parsed[key], list):
+                parsed = parsed[key]
+                break
+        else:
+            if "claim" in parsed:
+                parsed = [parsed]
     if not isinstance(parsed, list):
         return []
     out: list[dict[str, Any]] = []
