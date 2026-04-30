@@ -127,28 +127,33 @@ chunk's source page (or `sources.json`) and re-run; the report will reflect
 
 ---
 
+**Generated artifacts** intro with this improved version:
+
+```markdown
 ## Generated artifacts
+
+The pipeline writes all runtime outputs under `artifacts/`. These files are the audit trail of the system. They show what was scraped, how the corpus was chunked, which vectors were cached, what chunks were retrieved for each query, whether confidence fallback was triggered, what the LLM generated, how claims were verified, whether regeneration occurred, and what final response was returned.
+
+The `artifact-updates` branch highlights these generated-output expectations more explicitly. However, the artifacts should still be reproducible by running the pipeline from the configured inputs rather than being treated as manually prepared answer files.
 
 | Path | Contents |
 |---|---|
-| `artifacts/raw_pages/*.html` | Raw scraped HTML (best-effort) |
-| `artifacts/cleaned_pages.json` | Per-source ingestion records (success or failed) |
-| `artifacts/corpus.json` | Chunked corpus with `corpus_version` timestamp |
-| `artifacts/vector_store/embeddings.npy` | Normalized embedding matrix |
-| `artifacts/vector_store/metadata.json` | Per-row chunk metadata |
-| `artifacts/vector_store/embedding_manifest.json` | `chunk_id → {index, hash}` |
-| `artifacts/vector_store/cache.json` | `content_hash → vector` cache (gitignored) |
-| `artifacts/corpus_version_report.json` | Diff stats vs the previous run |
-| `artifacts/retrieval_logs.jsonl` | One record per retrieval event |
-| `artifacts/generated_answers.json` | Raw Stage-1 answers with citations |
-| `artifacts/grounding_verification.json` | Claim-by-claim verification |
-| `artifacts/answer_audit.json` | Full per-query trace |
-| `artifacts/llm_calls.jsonl` | One record per LLM call (stage, hash, …) |
-| `artifacts/answer_quality_scores.json` | Stage-3 quality scoring (optional) |
-| `artifacts/knowledge_gap_report.json` | Topic clustering of weak queries |
-| `artifacts/validation_report.json` | Output of `validate.py` |
-
----
+| `artifacts/raw_pages/*.html` | Raw scraped HTML from configured sources, saved best-effort for traceability |
+| `artifacts/cleaned_pages.json` | Per-source ingestion records, including success/failure status |
+| `artifacts/corpus.json` | Chunked corpus with `corpus_version`, source metadata, chunk IDs, token counts, hashes, and text |
+| `artifacts/vector_store/embeddings.npy` | Local file-based embedding matrix used for retrieval |
+| `artifacts/vector_store/metadata.json` | Metadata linking each embedding row to its chunk |
+| `artifacts/vector_store/embedding_manifest.json` | Manifest mapping chunk IDs and content hashes to embedding indexes |
+| `artifacts/vector_store/cache.json` | Content-hash-based embedding cache, gitignored |
+| `artifacts/corpus_version_report.json` | Corpus diff report showing unchanged, updated, added, and removed chunks |
+| `artifacts/retrieval_logs.jsonl` | One JSON record per retrieval event, including top-5 chunks and similarity scores |
+| `artifacts/generated_answers.json` | Stage-1 grounded answers generated only for queries that pass confidence |
+| `artifacts/grounding_verification.json` | Stage-2 claim-level verification records |
+| `artifacts/answer_audit.json` | Full per-query audit trail and final returned response |
+| `artifacts/llm_calls.jsonl` | One JSON record per LLM call, including stage, model, prompt hash, and artifacts |
+| `artifacts/answer_quality_scores.json` | Optional Stage-3 answer quality scoring |
+| `artifacts/knowledge_gap_report.json` | Optional clustering of weak or low-confidence query topics |
+| `artifacts/validation_report.json` | Output produced by `validate.py` |
 
 ## How the deterministic confidence fallback works
 
