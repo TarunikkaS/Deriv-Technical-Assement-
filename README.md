@@ -340,7 +340,7 @@ The pipeline writes runtime outputs under `artifacts/`.
 
 These files are the audit trail of the system. They show what was scraped, how the corpus was chunked, which vectors were cached, what chunks were retrieved for each query, whether confidence fallback was triggered, what the LLM generated, how claims were verified, whether regeneration occurred, and what final response was returned.
 
-The `artifact-updates` branch highlights these generated-output expectations more explicitly. However, the artifacts should still be reproducible by running the pipeline from the configured inputs rather than being treated as manually prepared answer files.
+The `artifact-updates` branch highlights these generated-output expectations more explicitly. 
 
 | Path | Contents |
 |---|---|
