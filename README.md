@@ -1,4 +1,4 @@
-# Deriv Help Centre — Replayable RAG Pipeline
+# Help Centre — Replayable RAG Pipeline
 
 A staged, auditable Retrieval-Augmented Generation system over the Deriv Help Centre.
 
